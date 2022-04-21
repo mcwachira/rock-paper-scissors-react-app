@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import { Routes, Route } from 'react-router-dom'
 import './Layout.module.css'
 
 import Header from '../Header/Header.component'
@@ -14,12 +14,23 @@ const Layout = () => {
     return (
 
         <>
-            <Modal />
-            <Header />
-            <Board />
-            <Game />
+            <div className="container">
+                <Modal />
+                <Header score={score} />
+                <Routes>
+                    <Route path='/board' element={<Board setChoice={setChoice} />} />
+
+
+                    <Route path='/game' element={<Game myChoice={myChoice} Score={score} setScore={setScore} />} />
+
+
+                </Routes>
+
+            </div>
 
             <Footer />
+
+
         </>
     )
 }
