@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import classes from './Game.module.css'
 const Game = ({ myChoice, Score, setScore }) => {
 
-    const [house, setHousePick] = useState(0)
+    const [house, setHousePick] = useState("")
     const [winner, setWinner] = useState('')
 
     const housePick = () => {
@@ -26,33 +26,70 @@ const Game = ({ myChoice, Score, setScore }) => {
             case "paperrock":
                 setWinner("win");
                 setScore(Score + 1)
-
-                break;
+                return;
 
             case "paperscissors":
             case "scissorsrock":
             case "rockpaper":
                 setWinner("loose");
                 setScore(Score - 1)
-
-                break;
+                return;
             case "paperpaper":
             case "scissorsscissors":
             case "rockrock":
                 setWinner("draw")
-
-                break;
+                return;
             default:
                 break;
         }
-
-
     }
+
+    // const Results = () => {
+    //     console.log(house)
+
+    //     if (myChoice === "paper" && house === "scissors") {
+    //         setWinner("loose");
+    //         setScore(Score - 1);
+    //     }
+    //     if (myChoice === "paper" && house === "rock") {
+    //         setWinner("win");
+    //         setScore(Score + 1);
+    //     }
+    //     if (myChoice === "paper" && house === "paper") {
+    //         setWinner("draw")
+    //     }
+    //     if (myChoice === "rock" && house === "scissors") {
+    //         setWinner("win");
+    //         setScore(Score + 1);
+    //     }
+    //     if (myChoice === "rock" && house === "paper") {
+    //         setWinner("loose");
+    //         setScore(Score - 1);
+    //     }
+    //     if (myChoice === "rock" && house === "rock") {
+    //         setWinner("draw")
+    //     }
+    //     if (myChoice === "scissors" && house === "scissors") {
+
+
+    //         setWinner("draw")
+    //     }
+    //     if (myChoice === "scissors" && house === "rock") {
+    //         setWinner("loose");
+    //         setScore(Score - 1);
+    //     }
+    //     if (myChoice === "scissors" && house === "paper") {
+    //         setWinner("win");
+    //         setScore(Score + 1);
+    //     }
+    // };
+
+
 
 
     useEffect(() => {
-        Results(myChoice, house)
-    })
+        Results()
+    }, [house])
 
     return (
         <div className={classes.game}>

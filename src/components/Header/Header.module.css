@@ -1,0 +1,38 @@
+.scoreboard {
+
+    margin: 3rem auto;
+    border: 3px solid #999;
+    border-radius: .5rem;
+    padding: 3rem 2rem;
+    width: 700px;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.scoreboard .score {
+    background-color: #fff;
+    height: 114px;
+    width: 150px;
+    /* padding: 2rem 2rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+}
+
+
+.scoreboard .score h3 {
+    font-size: 1rem;
+    color: #565468;
+}
+
+.scoreboard .score span {
+    font-size: 2.5rem;
+    line-height: 2.8rem;
+    font-weight: bold;
+    color: #565468;
+}
