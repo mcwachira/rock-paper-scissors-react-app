@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import classes from './Game.module.css'
 const Game = ({ myChoice, Score, setScore }) => {
 
@@ -19,8 +20,9 @@ const Game = ({ myChoice, Score, setScore }) => {
 
     const Results = () => {
 
-
+        console.log(myChoice)
         switch (myChoice + house) {
+
             case "scissorspaper":
             case "rockscissors":
             case "paperrock":
@@ -91,17 +93,57 @@ const Game = ({ myChoice, Score, setScore }) => {
         Results()
     }, [house])
 
+    const restartGame = () => {
+        setHousePick();
+        console.log('restart game')
+    }
+
     return (
-        <div className={classes.game}>
-            myChoice: {myChoice} <br />
-            house choice:{house}<br />
 
-            Results :{winner === 'win' && <h2> You  Win</h2>}
-            {winner === 'loose' && <h2> You  Loose</h2>}
-            {winner === 'draw' && <h2>         It's a tie!</h2>}
+        <>
+
+            <div className={classes.game}>
 
 
-        </div>
+                <div className={classes.userHand}>
+                    <h1>
+                        You Picked
+                    </h1>
+
+                    <div className={`${classes.icon} classes.${myChoice}`}></div>
+                    {console.log()}
+                </div>
+
+                <div className={classes.results}>
+                    <div className={classes.headingResults}>
+
+                        Results: {winner === 'win' && <h2> You  Win</h2>}
+                        {winner === 'loose' && <h2> You  Loose</h2>}
+                        {winner === 'draw' && <h2>         It's a tie!</h2>}
+
+
+                    </div>
+
+                    <button className={classes.restartButton} onClick={restartGame}>
+                        <Link to='/board'>
+                            Restart
+                        </Link>
+
+                    </button>
+                </div>
+
+                <div className={classes.houseHand}>
+                    <h1>
+                        House Picked
+                    </h1>
+
+                    <div className={`${classes.housePick} ${classes.icon}`}></div>
+                </div>
+
+
+            </div>
+        </>
+
     )
 }
 

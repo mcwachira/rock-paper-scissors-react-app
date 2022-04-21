@@ -1,0 +1,93 @@
+.game {
+
+    width: 800px;
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 1rem auto
+}
+
+.game>div {
+    flex: 1;
+}
+
+.game h1 {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.icon {
+    height: 250px;
+    width: 250px;
+
+    border-radius: 50%;
+    background-color: #fff;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.paper {
+    background-image: var(--paper-icon);
+    border: 1rem solid var(--paper-gradient);
+
+}
+
+.scissors {
+    background-image: var(--scissors-icon);
+    border: 1rem solid var(--scissor-gradient);
+
+}
+
+.rock {
+    background-image: var(--rock-icon);
+    border: 1rem solid var(--rock-gradient);
+
+}
+
+
+.handImageContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.headingResults {
+    font-size: 2.2rem;
+}
+
+.restartButton {
+    font-size: 1.1rem;
+    padding: 1rem 3rem;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .3s;
+    margin-top: 1rem;
+    text-transform: uppercase;
+}
+
+.restartButton Link {
+    text-decoration: none;
+}
+
+.restartButton:hover {
+    background-color: bisque;
+    transform: translate3d(0px, -2px, 0px);
+    color: red;
+}
