@@ -11,6 +11,11 @@
     --score-text: hsl(229, 64%, 46%);
     --dark-text: hsl(217, 16%, 45%);
 
+    /* icon images */
+    --paper-icon: url(../assets/icon-paper.svg);
+    --scissors-icon: url(../assets/icon-scissors.svg);
+    --rock-icon: url(../assets/icon-rock.svg);
+
 
     /* Background color */
     --background-gradient: radial-gradient(circle, hsl(214, 47%, 23%), hsl(237, 49%, 15%))

@@ -1,6 +1,6 @@
 import React from 'react'
 import classes from './Header.module.css'
-import iconHeader from '../../assets/title.png'
+import iconHeader from '../../assets/logo.svg'
 const Header = ({ score }) => {
     return (
         <div className={classes.scoreboard}>
