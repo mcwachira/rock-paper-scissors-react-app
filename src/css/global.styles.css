@@ -1,0 +1,30 @@
+:root {
+
+    /* icon colors */
+    --scissor-gradient: hsl(39, 89%, 49%);
+    --paper-gradient: hsl(230, 89%, 62%);
+    --rock-gradient: hsl(349, 71%, 52%);
+
+    /* text colors */
+
+    --dark-text: hsl(229, 25%, 31%);
+    --score-text: hsl(229, 64%, 46%);
+    --dark-text: hsl(217, 16%, 45%);
+
+
+    /* Background color */
+    --background-gradient: radial-gradient(circle, hsl(214, 47%, 23%), hsl(237, 49%, 15%))
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: serif;
+    color: #fff;
+    text-align: center;
+    background: var(--background-gradient);
+}
