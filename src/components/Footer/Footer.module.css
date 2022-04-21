@@ -1,0 +1,17 @@
+.footer {
+    width: 100vw;
+}
+
+.footer .rules {
+    position: absolute;
+    bottom: 1rem;
+    padding: 7px 25px;
+    right: 1rem;
+    border-radius: .4rem;
+    border: 3px solid greenyellow;
+    background: none;
+    font-weight: none;
+    letter-spacing: 2px;
+    cursor: pointer;
+    color: #fff;
+}
